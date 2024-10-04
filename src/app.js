@@ -18,14 +18,13 @@ let when = [
 
 const word = anArray => {
   let num = Math.floor(Math.random() * anArray.length);
-  console.log("anArray.length: " + anArray.length);
-  console.log("num: " + num);
   return anArray[num];
 };
 
 window.onload = function() {
   //write your code here
   console.log("Hello Rigo from the console!");
-  document.getElementById("excuse").innerHTML =
-    word(who) + word(action) + word(what) + word(when);
+  let phrase =
+    word(who) + " " + word(action) + " " + word(what) + " " + word(when);
+  document.getElementById("excuse").innerHTML = phrase;
 };
